@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>The News</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="logo-wrapper d-flex align-items-center">
+            <h1>
+                <a href="technology.html">
+                    Бизнес
+                </a>
+            </h1>
+        </div>
+        
+    </div>
+    <div class="container-fluid menu">
+        <div class="container">
+            <div class="d-flex menu-items">
+                 <div class="active">
+                    <a href="{% url 'home' %}">Главный</a>
+                </div>
+                <div>
+                    <a href="{% url 'sport' %}">Спорт</a>
+                </div>
+
+                <div>
+                    <a href="{% url 'technology' %}">Технологии</a>
+                </div>
+                <div>
+                    <a href="{% url 'business' %}">Бизнес</a>
+                </div>
+                <div>
+                    <a href="{% url 'politika' %}">Политика</a>
+                </div>
+                <div>
+                    <a href="{% url 'health' %}">Здоровье</a>
+                </div>
+                <div class="d-flex justify-content-end mr-5">
+		<div class="col-4 fs-5 text-light">
+          <a href="{% url 'login' %}">Вход <br></a>
+          </div>
+            <div class="col-1 fs-5">
+            <a href="{% url 'register' %}">Регистрация</a>
+            </div>
+		 </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container main-news">
+        <div class="row">
+            <div class="col-8">
+                <h1>Nepal and PNG to play ODI series in Oman</h1>
+                <small>27th August, 2021</small>
+                <p class="mt-4 summary">Despite heroic innings from the bat of Sam Curran, India defeated England by 7
+                    runs to win the 3 match series 2-1. Chasing a target of 330 runs to win, the visiting team finished
+                    on 322/9 falling short of the target by 7 runs.</p>
+                <img src="data:image/jpeg;base64,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"
+                    class="mt-3 thumb">
+                <div class="story mt-4">
+                    <p>Despite heroic innings from the bat of Sam Curran, India defeated England by 7 runs to win the 3
+                        match series 2-1. Chasing a target of 330 runs to win, the visiting team finished on 322/9
+                        falling short of the target by 7 runs.</p>
+                    <p>Despite heroic innings from the bat of Sam Curran, India defeated England by 7 runs to win the 3
+                        match series 2-1. Chasing a target of 330 runs to win, the visiting team finished on 322/9
+                        falling short of the target by 7 runs.</p>
+                    <p>Despite heroic innings from the bat of Sam Curran, India defeated England by 7 runs to win the 3
+                        match series 2-1. Chasing a target of 330 runs to win, the visiting team finished on 322/9
+                        falling short of the target by 7 runs. Despite heroic innings from the bat of Sam Curran, India
+                        defeated England by 7 runs to win the 3 match series 2-1. Chasing a target of 330 runs to win,
+                        the visiting team finished on 322/9 falling short of the target by 7 runs.</p>
+                    <p>Despite heroic innings from the bat of Sam Curran, India defeated England by 7 runs to win the 3
+                        match series 2-1. Chasing a target of 330 runs to win, the visiting team finished on 322/9
+                        falling short of the target by 7 runs.</p>
+                    <p>Despite heroic innings from the bat of Sam Curran, India defeated England by 7 runs to win the 3
+                        match series 2-1. Chasing a target of 330 runs to win, the visiting team finished on 322/9
+                        falling short of the target by 7 runs.</p>
+                </div>
+                <hr>
+                <div class="container section mt-4 no-pad">
+                    <div class="section-title">
+                        <span>Recommended</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="https://letzcricket.com/uploads/news/zXhIbjMmry4D2Sup.png">
+                            </div>
+                            <a href="">
+                                India vs England 4th T20 : Match Prediction, Probabale XI, Fantasy Picks
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="https://letzcricket.com/uploads/articles/6CdghhIpvYREvJ6a.png">
+                            </div>
+                            <a href="">
+                                Glenn Maxwell's All-Time IPL XI, Big names missing
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="https://letzcricket.com/uploads/articles/dddNsPXVC6f5bmI5.jpg">
+                            </div>
+                            <a href="">
+                                Can Rohit be next Sehwag in Indian Test Cricket
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="https://letzcricket.com/uploads/articles/sL1e41w4xUmSDA8L.jpg">
+                            </div>
+                            <a href="">
+                                Domestic Cricket changing the face of Nepali Cricket
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="trending mt-4">
+                    <div class="section-title">
+                        <span>Trending</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img class="thumb" src="https://letzcricket.com/uploads/news/Pk9jw3Z9iv8EBLxE.jpg">
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                            <a href="">
+                                Paras Khadka retires from international cricket
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img class="thumb" src="https://letzcricket.com/uploads/articles/dddNsPXVC6f5bmI5.jpg">
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                            <a href="">
+                                Can Rohit be next Sehwag in Indian Test Cricket
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img class="thumb" src="https://letzcricket.com/uploads/news/vGWpKyVU7jHXz5K8.png">
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                            <a href="">
+                                India win series despite Sam Curran's Heroics
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img class="thumb" src="https://letzcricket.com/uploads/news/ZqXXlQDeCffne57g.jpg">
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                            <a href="">
+                                Domestic Cricket Changing the Face of Nepali Cricket
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img class="thumb" src="https://letzcricket.com/uploads/news/LCfdygXg89FURcsM.jpeg">
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                            <a href="">
+                                Afridi to play Everest Premier League from Kathmandu Kings
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        window.onscroll = function () {
+            setSticky();
+        }
+
+        navbar = document.getElementsByClassName('menu')[0];
+        var sticky = navbar.offsetTop;
+        function setSticky() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+        }
+    </script>
