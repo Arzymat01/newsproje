@@ -50,14 +50,14 @@
                 <div>
                     <a href="{% url 'health' %}">Здоровье</a>
                 </div>
-			<div class="d-flex justify-content-end mr-5">
-		<div class="col-4 fs-5 text-light">
-          <a href="{% url 'login' %}">Вход <br></a>
-         </div>
-         <div class="col-1 fs-5">
-           <a href="{% url 'register' %}">Регистрация</a>
-         </div>
-		 </div>
+			<div class=" col-6 d-flex justify-content-end mr-5">
+		       <div class="fs-5 text-light">
+                 <a href="{% url 'login' %}">Вход <br></a>
+               </div>
+               <div class=" fs-5">
+                 <a href="{% url 'register' %}">Регистрация</a>
+              </div>
+		    </div>
 			  
               
 
@@ -93,11 +93,11 @@
 						</h3>
 
 						<div class="image image-sm mb-1">
-							<img class="thumb" src="https://ktonanovenkogo.ru/image/tekhnologiia-skvorechnik.jpg">
+							<img class="thumb" src="{{post.politika_photo.url}}">
 						</div>
 						<h3 class="mb-4">
-							<a href="detail.html">
-								New Zealand win inaugural World Test Championship
+							<a href="https://ria.ru/20230226/zelenskiy-1854434303.html">
+								{{ post.politika_title }}
 							</a>
 						</h3>
 
@@ -106,20 +106,20 @@
 					<div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
 						<div class="image image-sm mb-1">
 							<img class="thumb"
-								src="https://er.ru/media/userdata/news/2012/01/18/c7cc7df4f438634eecb989b936f9b999.jpg">
+								src="{{post.bisiness_photo.url}}">
 						</div>
 						<h3 class="mb-4">
-							<a href="detail.html">
-								Afridi to play Everest Premier League from Kathmandu Kings
+							<a href="https://www.gazeta.ru/business/2023/02/17/16269385.shtml">
+							{{ post.business_title }}
 							</a>
 						</h3>
                          
 						<div class="image image-sm mb-3">
-							<img class="thumb image-sm" src="https://letzcricket.com/uploads/news/VxmVhzyjAkw3hCaB.png">
+							<img class="thumb image-sm" src="{{post.technology_photo.url}}">>
 						</div>
 						<h3>
-							<a href="detail.html">
-								IPL 2021 to resume in UAE in September-October
+							<a href="https://www.gazeta.ru/tech/2023/02/24/16288993.shtml">
+								{{ post.technology_title }}
 							</a>
 						</h3>
 

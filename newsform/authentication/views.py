@@ -12,7 +12,7 @@ def login_request(request):
 
         if user is not None:
             login(request, user)
-            return redirect("sport")
+            return redirect("dashboard")
         else:
             return render(request, "authentication/login.html", {
                 "error": "Ошибка!!!"
@@ -68,3 +68,8 @@ def register_request(request):
 
                           })
     return render(request, "authentication/register.html")
+
+
+def dashboard(request):
+
+    return render(request, 'authentication/dashboard.html',)

@@ -3,7 +3,8 @@ from django.urls import path, re_path
 from .views import index, business, health, politika, technology, sport
 
 urlpatterns = [
-    path('', index, name='home'),
+
+    path('home/', index, name='home'),
     path('health/', health, name='health'),
     path('business/', business, name='business'),
     path('politika/', politika, name='politika'),
