@@ -54,3 +54,12 @@ def technology(request):
         'news': news
     }
     return render(request, 'website/technology.html', context)
+
+
+def contact(request):
+
+    # news = News.objects.all()
+    # context = {
+    #     'news': news
+    # }
+    return render(request, 'website/contact.html')
