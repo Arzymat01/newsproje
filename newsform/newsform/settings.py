@@ -28,6 +28,7 @@ SECRET_KEY = 'django-insecure-o=3_(rmn(#34(m9!y3+k@8xgo1j*qzoes%db=$u7$%f#80qah_
 DEBUG = True
 
 ALLOWED_HOSTS = []
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 # Application definition
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     "ckeditor",
     "website.apps.WebsiteConfig",
     "authentication.apps.AuthenticationConfig",
+    "contact.apps.ContactConfig",
 ]
 
 MIDDLEWARE = [

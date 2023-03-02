@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, re_path
-from .views import index, business, health, politika, technology, sport, contact
+from .views import index, business, health, politika, technology, sport
 
 urlpatterns = [
 
@@ -10,7 +10,7 @@ urlpatterns = [
     path('politika/', politika, name='politika'),
     path('technology/', technology, name='technology'),
     path('sport/', sport, name='sport'),
-    path('contact/', contact, name='contact'),
+
 
 
 ]
