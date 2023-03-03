@@ -54,3 +54,8 @@ def technology(request):
         'news': news
     }
     return render(request, 'website/technology.html', context)
+
+
+def wecome(request):
+
+    return render(request, 'website/wecome.html')

@@ -18,6 +18,6 @@ def contact(request):
         contact.phone = phone
         contact.message = message
         contact.save()
-        return HttpResponse('<h1>Thanks for contact us</h1>')
+        return render(request, "contact/contact_us.html")
 
     return render(request, 'contact/contact.html')
