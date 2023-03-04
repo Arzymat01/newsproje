@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     "website.apps.WebsiteConfig",
     "authentication.apps.AuthenticationConfig",
     "contact.apps.ContactConfig",
+    "addnews.apps.AddnewsConfig",
+
+
 ]
 
 MIDDLEWARE = [

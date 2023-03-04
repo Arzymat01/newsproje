@@ -3,11 +3,19 @@ from .models import News
 
 
 def index(request):
+
+    search_query = request.GET.get('search', '')
+
+    if search_query:
+        news = News.objects.filter(home__contains=search_query)
+    else:
+        news = News.objects.all().order_by
     news = News.objects.all()
     context = {
         'news': news,
 
     }
+
     return render(request, 'website/index.html', context)
 
 

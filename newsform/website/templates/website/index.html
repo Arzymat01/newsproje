@@ -31,10 +31,13 @@
 			
 			</h1>
 			
-                <form class="d-flex align-items-end px-5">
-                    <input class="form-control me-2" type="text" name="searchform" placeholder="Найти..">
-                    <button class="btn btn-dark" type="button">Найти</button>
+                <form class="d-flex align-items-end px-5" action={% url 'home' %} method="get">
+				
+                    <input class="form-control me-2" type="search" name="search" placeholder="Найти..">
+                    <button class="btn btn-dark" type="sumbit">Найти</button>
+					
                 </form>
+				  <a style=" text-decoration: none " href="{% url 'addnews' %}"> <h4 >Добавить новость</h4></a>
 		</div>
 	
 		
@@ -82,6 +85,8 @@
             </div>
 		</div>
 	</div>
+	<div class="title">
+	</div>
     {%for post in news %}
 	<div class="container main-news section">
 		<div class="row">
@@ -90,6 +95,11 @@
 				 <img class="thumb mb-3"
 					src="{{post.news_photo.url}}"> 
 			    
+				<h3>
+					 <p class="font-large" href="detail.html">
+					<h4>{{ post.home|safe}}</h4> 
+					</p>
+				</h3>
 				<h3>
 					 <p class="font-large" href="detail.html">
 					<h4>{{ post.home|safe}}</h4> 

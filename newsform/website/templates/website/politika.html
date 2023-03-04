@@ -29,10 +29,15 @@
 					Политика
 				
 			</h1>
-			<form class="d-flex align-items-end px-5">
-                    <input class="form-control me-2" type="text" name="searchform" placeholder="Найти..">
-                    <button class="btn btn-dark" type="button">Найти</button>
+			<form class="d-flex align-items-end px-5" action={% url 'politika' %} method="get">
+				
+                    <input class="form-control me-2" type="search" name="search" placeholder="Найти..">
+                    <button class="btn btn-dark" type="sumbit">Найти</button>
                 </form>
+				
+                <a style=" text-decoration: none " href="{% url 'addnews' %}"> <h4 >Добавить новость</h4></a>
+		
+				
 		</div>
 		
 		
