@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Обновлять страница</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-wrapper d-flex align-items-center">
+            <h1>
+				
+					<span class="material-symbols-outlined">
+					bring_your_own_ip
+					</span><small class="text-danger">news</small>WoRlD
+										<i class="fa-solid fa-earth-africa"></i>
+					
+				
+			</h1>
+        </div>
+        
+      </div>
+      <div class="container-fluid menu">
+        <div class="container">
+            <div class="d-flex menu-items">
+                <div class="active">
+                    <a href="{% url 'home' %}">Главный</a>
+				
+                </div>
+                 <div class="col-6 d-flex justify-content-end mr-5">
+                     <div class="fs-5 text-light">
+                 <a href="{% url 'contact' %}">Контакт<br></a>
+               </div>
+		<div class=" fs-5 text-light">
+          <a href="{% url 'login' %}">Вход <br></a>
+          </div>
+          
+            <div class=" fs-5">
+            <a href="{% url 'register' %}">Регистрация</a>
+            </div>
+		 </div>
+
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="container my-4">
+        <h3>Добавить Пость</h3>
+        <p><a class="btn btn-success" href="{% url 'updates' %}">Все Новести</a></p>
+        <div class="card my-3">
+            <h5 class="card-header">Add Post</h5>
+            <div class="card-body">
+                {% if messages %}
+                    {% for msg in messages %}
+                        <p class="text-success">{{msg}}</p>
+                    {% endfor %}
+                {% endif %}
+                <form method="post" action="/update/{{post.id}}">
+                    {% csrf_token %}
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Тема</th>
+                            <td>
+                                <input value="{{post.title}}" type="text" name="title"class="form-control" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Новести</th>
+                            <td>
+                                <textarea name="detail"  class="form-control">{{post.detail}}</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button type="submit" class="btn btn-primary">Отправить</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

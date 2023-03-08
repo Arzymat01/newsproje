@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     "authentication.apps.AuthenticationConfig",
     "contact.apps.ContactConfig",
     "addnews.apps.AddnewsConfig",
+    "updatesite.apps.UpdatesiteConfig",
+
+
 
 
 ]
