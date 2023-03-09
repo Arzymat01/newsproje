@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+# from os import getenv
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,11 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-o=3_(rmn(#34(m9!y3+k@8xgo1j*qzoes%db=$u7$%f#80qah_'
-
+# SECRET_KEY = getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = getenv("IS_DEVELOPMENT", True)
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+
+]
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
