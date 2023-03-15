@@ -18,18 +18,17 @@ from django.urls import path, include, re_path
 from website import views
 from django.conf.urls.static import static
 from django.conf import settings
-from drfnews.views import NewsApiView
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/v1/websitelist/", NewsApiView.as_view()),
     path("", include('website.urls')),
     path("", include('authentication.urls')),
     path("", include('contact.urls')),
     path("", include('addnews.urls')),
     path("", include('updatesite.urls')),
-    path('api-auth/', include('rest_framework.urls'))
+    path('api-auth/', include('rest_framework.urls')),
+    path("api/v1/", include("drfnews.urls")),
 
 
 
