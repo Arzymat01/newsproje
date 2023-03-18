@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from rest_framework import generics
 from website.models import News
-from .serializer import NewsSerializer
+from .serializer import NewsSerializer, NewsViewSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from contact.models import Contact_us
 from django.forms import model_to_dict
+
 
 
 class NewsApiView(APIView):
@@ -22,6 +23,15 @@ class NewsApiView(APIView):
 
         # def post(self, request, format=None):
         #     return Response({'city': 'Bishkek'})
+
+
+class NewsView(APIView):
+    permission_classes=[IsAuthenticated]
+    def ger(self,request,pk):
+        new=News.objects.get(id=pk)
+        serializer = NewsViewSerializer(new)
+
+        return(serializer.data)
 
 
 class ContactAPIView(APIView):
