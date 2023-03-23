@@ -111,7 +111,6 @@
 			</div>
 		</div>
 	</div>
-	{% endfor %}
 
 
 	<div class="container section">
@@ -138,64 +137,67 @@
 					{% endfor %}
 				</div>
 			</div>
+			
 			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 				<div class="trending mt-4">
 					<div class="section-title">
-						<span>Trending</span>
+							<span class="text-danger"><h3>Новести</h3></span>  
 					</div>
 					<div class="row">
 						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/Pk9jw3Z9iv8EBLxE.jpg">
+							<img class="thumb" src="{{ post.bisiness_photo.url}}">
 						</div>
 						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<a href="detail.html">
-								Paras Khadka retires from international cricket
+							<a href="">
+								{{ post.business_title}}
 							</a>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/articles/dddNsPXVC6f5bmI5.jpg">
+							<img class="thumb" src="{{ post.news_photo.url}}">
 						</div>
 						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<a href="detail.html">
-								Can Rohit be next Sehwag in Indian Test Cricket
+							<a href="">
+								{{post.news_title}}
 							</a>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/vGWpKyVU7jHXz5K8.png">
+							<img class="thumb" src="{{post.sport_photo.url}}">
 						</div>
 						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<a href="detail.html">
-								India win series despite Sam Curran's Heroics
+							<a href="">
+								{{post.sport_title}}
 							</a>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/ZqXXlQDeCffne57g.jpg">
+							<img class="thumb" src="{{ post.technology_photo.url}}">
 						</div>
 						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<a href="detail.html">
-								Domestic Cricket Changing the Face of Nepali Cricket
+							<a href="">
+								{{post.technology_title }}
 							</a>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/rTv8qzdEizH8HSTE.png">
+							<img class="thumb" src="{{post.health_photo.url}}">
 						</div>
 						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
 							<a href="detail.html">
-								Afridi to play Everest Premier League from Kathmandu Kings
+								{{ post.healh_title}}
 							</a>
 						</div>
 					</div>
 				</div>
 				
 			</div>
+				{% endfor %}
+
 		</div>
 		
 	</div>

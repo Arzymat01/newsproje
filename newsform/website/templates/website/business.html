@@ -15,7 +15,7 @@
                     <p>{{ post.business|safe}}</p>
 
                 </div>
-                 {% endfor %}
+              
                 <hr>
                 <div class="container section mt-4 no-pad">
                     <div class="section-title">
@@ -24,43 +24,141 @@
                     <div class="row">
                         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
                             <div class="mb-2 image image-xs">
-                                <img class="thumb" src="https://letzcricket.com/uploads/news/zXhIbjMmry4D2Sup.png">
+                                <img class="thumb" src="{{post.bisiness_photo.url}}">
                             </div>
                             <a href="">
-                                India vs England 4th T20 : Match Prediction, Probabale XI, Fantasy Picks
+                                {{post.business_title}}
                             </a>
                         </div>
                         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
                             <div class="mb-2 image image-xs">
-                                <img class="thumb" src="https://letzcricket.com/uploads/articles/6CdghhIpvYREvJ6a.png">
+                                <img class="thumb" src="{{post.sport_photo.url}}">
                             </div>
                             <a href="">
-                                Glenn Maxwell's All-Time IPL XI, Big names missing
+                              {{post.sport_title}}
                             </a>
                         </div>
                         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
                             <div class="mb-2 image image-xs">
-                                <img class="thumb" src="https://letzcricket.com/uploads/articles/dddNsPXVC6f5bmI5.jpg">
+                                <img class="thumb" src="{{post.technology_photo.url}}">
                             </div>
                             <a href="">
-                                Can Rohit be next Sehwag in Indian Test Cricket
+                            {{post.technology_title}}
                             </a>
                         </div>
                         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
                             <div class="mb-2 image image-xs">
-                                <img class="thumb" src="https://letzcricket.com/uploads/articles/sL1e41w4xUmSDA8L.jpg">
+                                <img class="thumb" src="{{post.health_photo.url}}">
                             </div>
                             <a href="">
-                                Domestic Cricket changing the face of Nepali Cricket
+                              {{post.healh_title}}
                             </a>
                         </div>
+                        <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="{{post.sport_photo.url}}">
+                            </div>
+                            <a href="">
+                              {{post.sport_title}}
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="{{post.technology_photo.url}}">
+                            </div>
+                            <a href="">
+                            {{post.technology_title}}
+                            </a>
+                        </div>
+                         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="{{post.health_photo.url}}">
+                            </div>
+                            <a href="">
+                              {{post.healh_title}}
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="{{post.politika_photo.url}}">
+                            </div>
+                            <a href="">
+                            {{post.politika_title}}
+                            </a>
+                        </div>
+                         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="{{post.news_photo.url}}">
+                            </div>
+                            <a href="">
+                            {{post.news_title}}
+                            </a>
+                        </div>
+                         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="{{post.health_photo.url}}">
+                            </div>
+                            <a href="">
+                            {{post.healh_title}}
+                            </a>
+                        </div>
+                         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="{{post.bisiness_photo.url}}">
+                            </div>
+                            <a href="">
+                            {{post.business_title}}
+                            </a>
+                        </div>
+                         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="{{post.sport_photo.url}}">
+                            </div>
+                            <a href="">
+                            {{post.sport_title}}
+                            </a>
+                        </div>
+                         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="{{post.politika_photo.url}}">
+                            </div>
+                            <a href="">
+                            {{post.politika_title}}
+                            </a>
+                        </div>
+                         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="{{post.news_photo.url}}">
+                            </div>
+                            <a href="">
+                            {{post.news_title}}
+                            </a>
+                        </div>
+                         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="{{post.sport_photo.url}}">
+                            </div>
+                            <a href="">
+                            {{post.sport_title}}
+                            </a>
+                        </div>
+                         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                            <div class="mb-2 image image-xs">
+                                <img class="thumb" src="{{post.bisiness_photo.url}}">
+                            </div>
+                            <a href="">
+                            {{post.business_title}}
+                            </a>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
+              {% endfor %}
             <div class="col-4">
                 <div class="trending mt-4">
                     <div class="section-title">
-                        <span>Trending</span>
+                        <span>Новести Бизнес</span>
                     </div>
                     {% for title,desc,img,pbl,ctn,ur in mylist %}
                     <div class="row">
