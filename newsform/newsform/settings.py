@@ -44,12 +44,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     "ckeditor",
+
     "website.apps.WebsiteConfig",
     "authentication.apps.AuthenticationConfig",
     "contact.apps.ContactConfig",
     "addnews.apps.AddnewsConfig",
     "updatesite.apps.UpdatesiteConfig",
+    "drfnews.apps.DrfnewsConfig",
+
+    'rest_framework',
 
 
 
@@ -119,6 +124,14 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 
 # Internationalization

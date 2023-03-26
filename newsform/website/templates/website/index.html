@@ -57,7 +57,7 @@
 						</h3>
                          
 						<div class="image image-sm mb-3">
-							<img class="thumb image-sm" src="{{post.technology_photo.url}}">>
+							<img class="thumb image-sm" src="{{post.technology_photo.url}}">
 						</div>
 						<h3>
 							<a href="https://www.gazeta.ru/tech/2023/02/24/16288993.shtml">
@@ -70,42 +70,43 @@
 			</div>
 		</div>
 	</div>
+	
 
 	<div class="container section mt-4">
-		<div class="section-title">
-			<span>Analysis & Prediction</span>
+		<div class="">
+			<span class="text-danger"><h3>Новести</h3></span>
 		</div>
 		<div class="row">
 			<div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
 				<div class="mb-2 image image-xs">
-					<img class="thumb" src="https://letzcricket.com/uploads/news/zXhIbjMmry4D2Sup.png">
+					<img class="thumb" src="{{ post.bisiness_photo.url }}">
 				</div>
-				<a href="detail.html">
-					India vs England 4th T20 : Match Prediction, Probabale XI, Fantasy Picks
+				<a href="https://www.gazeta.ru/business/2023/02/17/16269385.shtml">
+					{{ post.business_title }}
 				</a>
 			</div>
 			<div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
 				<div class="mb-2 image image-xs">
-					<img class="thumb" src="https://letzcricket.com/uploads/articles/6CdghhIpvYREvJ6a.png">
+					<img class="thumb" src="{{ post.politika_photo.url }}">
 				</div>
-				<a href="detail.html">
-					Glenn Maxwell's All-Time IPL XI, Big names missing
+				<a href="https://ria.ru/20230226/zelenskiy-1854434303.html">
+					{{ post.politika_title }}
 				</a>
 			</div>
 			<div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
 				<div class="mb-2 image image-xs">
-					<img class="thumb" src="https://letzcricket.com/uploads/articles/dddNsPXVC6f5bmI5.jpg">
+					<img class="thumb" src="{{ post.sport_photo.url }}">
 				</div>
-				<a href="detail.html">
-					Can Rohit be next Sehwag in Indian Test Cricket
+				<a href="https://prosports.kg/news/588863-reitingovyi-turnir-v-egipte-kyrgyzstanskii-borets-poteryal-soznanie-vo-vremya-shvatki#:~:text=%D0%90%D0%BB%D0%B8%D0%B1%D0%B5%D0%BA%20%D0%9E%D1%81%D0%BC%D0%BE%D0%BD%D0%BE%D0%B2%20%D0%B2%D1%8B%D1%81%D1%82%D1%83%D0%BF%D0%B0%D0%BB%20%D0%B2%20%D0%B2%D0%B5%D1%81%D0%BE%D0%B2%D0%BE%D0%B9,%D1%81%D1%85%D0%B2%D0%B0%D1%82%D0%BA%D1%83%2C%20%D0%B0%20%D0%9E%D1%81%D0%BC%D0%BE%D0%BD%D0%BE%D0%B2%20%D0%BF%D0%BE%D1%82%D0%B5%D1%80%D1%8F%D0%BB%20%D1%81%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B5.">
+					{{ post.sport_title }}
 				</a>
 			</div>
 			<div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
 				<div class="mb-2 image image-xs">
-					<img class="thumb" src="https://letzcricket.com/uploads/articles/sL1e41w4xUmSDA8L.jpg">
+					<img class="thumb" src="{{ post.technology_photo.url }}">
 				</div>
-				<a href="detail.html">
-					Domestic Cricket changing the face of Nepali Cricket
+				<a href="https://www.gazeta.ru/tech/2023/02/24/16288993.shtml">
+					{{ post.technology_title }}
 				</a>
 			</div>
 		</div>
@@ -117,219 +118,90 @@
 			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 				<div class="mb-4 mt-4">
 					<div class="section-title">
-						<span>Latest Updates</span>
+						{% for title,desc,img,pbl,ctn,ur in mylist %}
+					
 					</div>
 					<div class="row mb-3 bb-1 pt-0">
 						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/vGWpKyVU7jHXz5K8.png">
+							<img class="thumb" src="{{ img }}">
 						</div>
 						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
 							<h5>
-								<a href="detail.html">
-									India win series despite Sam Curran's heroics
+								<a href="{{ur}}">
+									{{title}}
 								</a>
 							</h5>
-							<small>29th August, 2021</small>
-							<p class="summary pt-3">Despite heroic innings from the bat of Sam Curran, India defeated
-								England by 7 runs to win the 3 match series 2-1. Chasing a target of 330 runs to win,
-								the visiting team finished on 322/9 falling short of the target by 7 runs.</p>
+							<small>{{ pbl }}</small>
+							<p class="summary pt-3">{{ctn}}</p>
 						</div>
-					</div>
-					<div class="row mb-3 bb-1 pt-0">
-						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/vGWpKyVU7jHXz5K8.png">
-						</div>
-						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<h5>
-								<a href="detail.html">
-									India win series despite Sam Curran's heroics
-								</a>
-							</h5>
-							<small>29th August, 2021</small>
-							<p class="summary pt-3">Despite heroic innings from the bat of Sam Curran, India defeated
-								England by 7 runs to win the 3 match series 2-1. Chasing a target of 330 runs to win,
-								the visiting team finished on 322/9 falling short of the target by 7 runs.</p>
-						</div>
-					</div>
-					<div class="row mb-3 bb-1 pt-0">
-						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/vGWpKyVU7jHXz5K8.png">
-						</div>
-						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<h5>
-								<a href="detail.html">
-									India win series despite Sam Curran's heroics
-								</a>
-							</h5>
-							<small>29th August, 2021</small>
-						
-							<p class="summary pt-3">
-							
-							</p>
-							 
-						</div>
-						
-					</div>
-					<div class="row mb-3 bb-1 pt-0">
-						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/vGWpKyVU7jHXz5K8.png">
-						</div>
-						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<h5>
-								<a href="detail.html">
-									India win series despite Sam Curran's heroics
-								</a>
-							</h5>
-							<small>29th August, 2021</small>
-							<p class="summary pt-3">Despite heroic innings from the bat of Sam Curran, India defeated
-								England by 7 runs to win the 3 match series 2-1. Chasing a target of 330 runs to win,
-								the visiting team finished on 322/9 falling short of the target by 7 runs.</p>
-						</div>
-					</div>
-					<div class="row mb-3 bb-1 pt-0">
-						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/vGWpKyVU7jHXz5K8.png">
-						</div>
-						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<h5>
-								<a href="detail.html">
-									India win series despite Sam Curran's heroics
-								</a>
-							</h5>
-							<small>29th August, 2021</small>
-							<p class="summary pt-3">Despite heroic innings from the bat of Sam Curran, India defeated
-								England by 7 runs to win the 3 match series 2-1. Chasing a target of 330 runs to win,
-								the visiting team finished on 322/9 falling short of the target by 7 runs.</p>
-						</div>
-					</div>
-					<div class="row mb-3 bb-1 pt-0">
-						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/vGWpKyVU7jHXz5K8.png">
-						</div>
-						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<h5>
-								<a href="detail.html">
-									India win series despite Sam Curran's heroics
-								</a>
-							</h5>
-							<small>29th August, 2021</small>
-							<p class="summary pt-3">Despite heroic innings from the bat of Sam Curran, India defeated
-								England by 7 runs to win the 3 match series 2-1. Chasing a target of 330 runs to win,
-								the visiting team finished on 322/9 falling short of the target by 7 runs.</p>
-						</div>
-					</div>
-					<div class="row mb-3 bb-1 pt-0">
-						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/vGWpKyVU7jHXz5K8.png">
-						</div>
-						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<h5>
-								<a href="detail.html">
-									India win series despite Sam Curran's heroics
-								</a>
-							</h5>
-							<small>29th August, 2021</small>
-							<p class="summary pt-3">Despite heroic innings from the bat of Sam Curran, India defeated
-								England by 7 runs to win the 3 match series 2-1. Chasing a target of 330 runs to win,
-								the visiting team finished on 322/9 falling short of the target by 7 runs.</p>
-						</div>
-					</div>
-					<div class="row mb-3 bb-1 pt-0">
-						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/vGWpKyVU7jHXz5K8.png">
-						</div>
-						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<h5>
-								<a href="detail.html">
-									India win series despite Sam Curran's heroics
-								</a>
-							</h5>
-							<small>29th August, 2021</small>
-							<p class="summary pt-3">Despite heroic innings from the bat of Sam Curran, India defeated
-								England by 7 runs to win the 3 match series 2-1. Chasing a target of 330 runs to win,
-								the visiting team finished on 322/9 falling short of the target by 7 runs.</p>
-						</div>
-					</div>
-					<div class="row mb-3 bb-1 pt-0">
-						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/vGWpKyVU7jHXz5K8.png">
-						</div>
-						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<h5>
-								<a href="detail.html">
-									India win series despite Sam Curran's heroics
-								</a>
-							</h5>
-							<small>29th August, 2021</small>
-							<p class="summary pt-3">Despite heroic innings from the bat of Sam Curran, India defeated
-								England by 7 runs to win the 3 match series 2-1. Chasing a target of 330 runs to win,
-								the visiting team finished on 322/9 falling short of the target by 7 runs.</p>
-						</div>
-					</div>
+					{% endfor %}
 				</div>
 			</div>
+			
 			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 				<div class="trending mt-4">
-					<div class="section-title">
-						<span>Trending</span>
+					<div class="">
+							  <span class="text-danger"><h3>Нов<span class="text-dark">ести</span></h3></span> 
 					</div>
 					<div class="row">
 						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/Pk9jw3Z9iv8EBLxE.jpg">
+							<img class="thumb" src="{{ post.bisiness_photo.url}}">
 						</div>
 						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<a href="detail.html">
-								Paras Khadka retires from international cricket
+							<a href="">
+								{{ post.business_title}}
 							</a>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/articles/dddNsPXVC6f5bmI5.jpg">
+							<img class="thumb" src="{{ post.news_photo.url}}">
 						</div>
 						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<a href="detail.html">
-								Can Rohit be next Sehwag in Indian Test Cricket
+							<a href="">
+								{{post.news_title}}
 							</a>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/vGWpKyVU7jHXz5K8.png">
+							<img class="thumb" src="{{post.sport_photo.url}}">
 						</div>
 						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<a href="detail.html">
-								India win series despite Sam Curran's Heroics
+							<a href="">
+								{{post.sport_title}}
 							</a>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/ZqXXlQDeCffne57g.jpg">
+							<img class="thumb" src="{{ post.technology_photo.url}}">
 						</div>
 						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-							<a href="detail.html">
-								Domestic Cricket Changing the Face of Nepali Cricket
+							<a href="">
+								{{post.technology_title }}
 							</a>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-							<img class="thumb" src="https://letzcricket.com/uploads/news/rTv8qzdEizH8HSTE.png">
+							<img class="thumb" src="{{post.health_photo.url}}">
 						</div>
 						<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
 							<a href="detail.html">
-								Afridi to play Everest Premier League from Kathmandu Kings
+								{{ post.healh_title}}
 							</a>
 						</div>
 					</div>
 				</div>
 				
 			</div>
+				{% endfor %}
+
 		</div>
 		
 	</div>
-	{% endfor %}
+	
  <div class="container  my-4 col-3 ">
         <div class="justify-content-sm-center ">
             <a class="btn btn-primary" style="background-color: #ac2bac;"
