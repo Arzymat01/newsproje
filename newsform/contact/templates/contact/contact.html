@@ -23,45 +23,42 @@
         </div>
         
     </div>
-    <div class="container-fluid menu">
-        <div class="container">
-            <div class="d-flex menu-items">
-                 <div class="active">
-                    <a href="{% url 'home' %}">Главный</a>
-                </div>
-                <div>
-                    <a href="{% url 'sport' %}">Спорт</a>
-                </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-danger" href="#">NeWss<span class="text-white">WoRlD</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileViewCollapse">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="mobileViewCollapse">
+                <ul class="navbar-nav me-auto fs-4">
+                    <li class="nav-item"> <a href="{% url 'home' %}" class="nav-link"> Главная </a></li>
+                    <li class="nav-item"> <a href="{% url 'sport' %}" class="nav-link"> Спорт </a></li>
+                    <li class="nav-item"> <a href="{% url 'technology' %}" class="nav-link"> Технологии </a></li>
+					<li class="nav-item"> <a href="{% url 'business' %}" class="nav-link"> Бизнес</a></li>
+                    <li class="nav-item"> <a href="{% url 'politika' %}" class="nav-link">Политика</a></li>
+					<li class="nav-item"> <a href="{% url 'health' %}" class="nav-link">Здоровье</a></li>
+                   
+                    
+                </ul>
 
-                <div>
-                    <a href="{% url 'technology' %}">Технологии</a>
-                </div>
-                <div>
-                    <a href="{% url 'business' %}">Бизнес</a>
-                </div>
-                <div>
-                    <a href="{% url 'politika' %}">Политика</a>
-                </div>
-                <div>
-                    <a href="{% url 'health' %}">Здоровье</a>
-                </div>
-                <div class="col-6 d-flex justify-content-end mr-5">
-                     <div class="fs-5 text-light">
-                 <a href="{% url 'contact' %}">Контакт<br></a>
-               </div>
-		<div class=" fs-5 text-light">
-          <a href="{% url 'login' %}">Вход <br></a>
-          </div>
-          
-            <div class=" fs-5">
-            <a href="{% url 'register' %}">Регистрация</a>
-            </div>
-		 </div>
-
+                <form class="d-flex">
+					
+                  <ul class="navbar-nav me-auto fs-5">
+					 
+					 
+                    <li class="nav-item"> <a href="{% url 'login' %}" class="nav-link">Вход</a></li>
+                    <li class="nav-item"> <a href="{% url 'register' %}" class="nav-link">Регистрация</a></li>
+					
+					
+                   
+                    
+                </ul>  
+                </form>
 
             </div>
         </div>
-    </div>
+    </nav>
 
     <div class="contact-2 content-area-5">
     <div class="container">

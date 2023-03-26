@@ -2,13 +2,14 @@
 {% block content %}
     <div class="container main-news">
         <div class="row">
+            <div class="">
+                       <span class="text-danger"><h3>Техно<span class="text-dark">логия</span></h3></span>
+                    </div>
              {% for title,desc,img,pbl,ctn,ur in mylist %}
             <div class="col-8">
 
                 <div class="mb-4 mt-4 section">
-                    <div class="">
-                       <span class="text-danger"><h3>Технология</h3></span>
-                    </div>
+                    
                     <div class="row mb-3 bb-1 pt-0">
                         <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                             <img class="thumb" src="{{ img }}">
@@ -28,8 +29,10 @@
             </div>
              {% endfor %}
             
+               
+            </div>
             <div class="container  my-4 col-3 ">
-        <div class="justify-content-sm-center ">
+                <div class="justify-content-sm-center ">
             <a class="btn btn-primary" style="background-color: #ac2bac;"
                 href="https://www.youtube.com/channel/UCxWibleqOswc-rMZMtg6d6g" role="button"><i
                     class="fab fa-instagram"></i></a>
@@ -43,6 +46,7 @@
             <a class="btn btn-primary" style="background-color: #3b5998;"
                 href="https://www.facebook.com/profile.php?id=100012899505781" role="button"><i
                     class="fab fa-facebook-f"></i></a>
+        </div>
         </div>
         </div>
     {% endblock %}  
